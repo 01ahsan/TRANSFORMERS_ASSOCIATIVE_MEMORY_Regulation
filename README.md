@@ -32,7 +32,7 @@ The script warns and skips that curve. Everything else is still produced,
 including the capacity-boundary plot. Pass `--strict-main` if you'd rather
 it fail on missing main-paper inputs.
 
-## Training from scratch
+## Training from Beginning
 
 The first run downloads the datasets and the encoder. Caches, checkpoints and
 results are written under `outputs/`. Set `HEAD_GEOMETRY_ROOT` to put them
