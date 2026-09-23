@@ -1,24 +1,16 @@
 # Head Geometry and Associative Memory
 
-Code for experiments separating attention head dimension, head count, and
-total attention width in associative memory. This is the anonymous review
-release. Training programs are in `experiments/`; statistical analysis and
-paper asset generation are in `analysis/`.
+Training and analysis code for measuring how attention head size and count
+affect associative recall. Includes saved result tables for plotting without
+rerunning training.
 
-The real-text experiments use WikiText-103
-([Merity et al., 2017](https://openreview.net/forum?id=Byj72udxe)) and AG News
-([Zhang et al., 2015](https://papers.nips.cc/paper_files/paper/2015/hash/250cf8b51c773f3f8dc8b4be867a9a02-Abstract.html)).
-Both corpora are encoded with the frozen `all-MiniLM-L6-v2` sentence encoder
-([Reimers and Gurevych, 2019](https://aclanthology.org/D19-1410/);
-[Wang et al., 2020](https://papers.nips.cc/paper_files/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)),
-producing 384-dimensional normalized representations. Queries are deterministic
-10% word-drop views of their keys. AG News category labels are unused; the
-corpus provides an independent text-representation distribution. See
-[data preparation](docs/data.md) and [BibTeX references](references.bib).
+- `experiments/`: training programs and controls.
+- `analysis/`: statistical analysis and paper plots.
+- `results/`: saved CSV/JSON inputs.
 
 ## Setup
 
-Use Python 3.11. From the repository root:
+Use Python 3.11. Run the commands below from the repository root.
 
 ```sh
 python -m venv .venv
@@ -31,32 +23,30 @@ Activate with `source .venv/bin/activate` on Linux/macOS or
 python -m pip install -r requirements.txt
 ```
 
-Training requires CUDA and a compatible PyTorch installation. The WikiText
-capacity experiment requires two visible GPUs; the other training programs
-support one or two. Analysis runs on CPU.
+Plotting and analysis run on CPU. Training needs CUDA: two GPUs for
+`wikitext_capacity.py`, one or two for the other experiments. Install a
+PyTorch build compatible with your CUDA environment.
 
-## Paper results
-
-The compact CSV/JSON inputs are included in `results/`. Generate the supported
-paper tables and plots without training:
+## Plot the saved results
 
 ```sh
-python analysis/paper_assets.py
+python analysis/paper_assets.py --project-root results
 ```
 
-Outputs are written to `outputs/paper/`. The available inputs generate 67
-assets. The WikiText capacity point-summary CSV is missing, so its
-capacity-curves figure is skipped; the capacity-boundary figure is supported.
-WikiText summary tables retained from paper exports are identified separately
-from run-archive records in [result provenance](results/provenance.json).
+Writes tables and plots to `outputs/paper/`. Use `--output-dir` to choose
+another directory.
 
-## Experiments
+The WikiText capacity point-summary CSV is missing. The command reports this
+and skips that curve; the capacity-boundary plot still works. Add
+`--strict-main` to fail on missing main-paper inputs instead.
 
-Run from the repository root. Each program downloads its public inputs and
-writes caches and run artifacts beneath `outputs/`. Set `HEAD_GEOMETRY_ROOT`
-to change this location. Use a fresh directory for an independent run.
+## Run the experiments
 
-The WikiText sequence is:
+The first run downloads the datasets and encoder. Caches, checkpoints, and
+results go under `outputs/`. Set `HEAD_GEOMETRY_ROOT` to change the run root;
+use a fresh directory for an independent run.
+
+Run the WikiText stages in this order:
 
 ```sh
 python experiments/wikitext_capacity.py
@@ -66,7 +56,7 @@ python analysis/regime_dynamics.py
 python experiments/wikitext_confirmation.py
 ```
 
-The AG News sequence is:
+Then run the AG News stages:
 
 ```sh
 python experiments/agnews_transfer.py
@@ -75,21 +65,25 @@ python experiments/agnews_confirmation.py
 python experiments/head_partition.py
 ```
 
-After completing the relevant experiments, generate paper tables and plots:
+To plot a new run:
 
 ```sh
 python analysis/paper_assets.py --project-root outputs --output-dir outputs/paper
 ```
 
-Run any program with `--help` for its options. Dependencies between stages,
-path overrides, and reproduction limits are described in
-[reproducibility](docs/reproducibility.md).
+Each program supports `--help`. See [reproducibility](docs/reproducibility.md)
+for stage dependencies, path overrides, and environment details.
 
-Datasets, checkpoints, embedding caches, and generated figures are not
-included. Some historical synthetic-discovery programs and the final integrity-audit
-utility are not included in this release. These omissions do not affect the
-code or result records underlying the main confirmatory claims; see
-`docs/provenance.md` for details.
+## Data and scope
 
-No full GPU training was rerun for this release. License status is recorded
-in [LICENSE](LICENSE).
+The experiments use WikiText-103 and AG News, with frozen `all-MiniLM-L6-v2`
+embeddings. Dataset loading, preprocessing, and citations are in
+[data.md](docs/data.md); BibTeX entries are in [references.bib](references.bib).
+
+Datasets, model weights, and checkpoints are downloaded or generated locally.
+Some historical synthetic programs and the final integrity-audit utility are
+not included. The code and result records for the main confirmatory claims
+are retained; [provenance](docs/provenance.md) documents the gaps and checks.
+Full GPU training was not rerun for this release.
+
+See [LICENSE](LICENSE) for license status.
