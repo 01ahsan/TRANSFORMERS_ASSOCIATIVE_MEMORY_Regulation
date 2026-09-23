@@ -1,0 +1,3 @@
+study,comparison,load_F,n_paired_seeds,p_success_first,p_success_second,paired_risk_difference,ci_low,ci_high,exact_mcnemar_p_value,status
+agnews confirmation: parameter-allocation comparison,H8_D64 - H8_D32,6,120,0.6,0.16666666666666666,0.43333333333333335,0.3333333333333333,0.5333333333333333,3.0655256978706635e-12,independent external confirmation
+head partition: fixed-attention-width partition control,H8_D64 - H16_D32,6,120,0.6083333333333333,0.4583333333333333,0.15,0.025,0.275,0.0327657590988232,prospectively frozen causal control

@@ -1,0 +1,13 @@
+contrast,outcome,architecture_a,architecture_b,paired_seeds,p_a,p_b,risk_difference_a_minus_b,a_only_success,b_only_success,both_success,neither_success,exact_mcnemar_p_value
+width_effect_at_8_heads,entered_regime_030,H8_D64,H8_D32,10,0.3,0.1,0.19999999999999998,3,1,0,6,0.625
+width_effect_at_8_heads,entered_regime_050,H8_D64,H8_D32,10,0.3,0.1,0.19999999999999998,3,1,0,6,0.625
+width_effect_at_8_heads,final_success_threshold_080,H8_D64,H8_D32,10,0.2,0.0,0.2,2,0,0,8,0.5
+width_effect_at_16_heads,entered_regime_030,H16_D64,H16_D32,10,0.2,0.1,0.1,2,1,0,7,1.0
+width_effect_at_16_heads,entered_regime_050,H16_D64,H16_D32,10,0.1,0.1,0.0,1,1,0,8,1.0
+width_effect_at_16_heads,final_success_threshold_080,H16_D64,H16_D32,10,0.0,0.1,-0.1,0,1,0,9,1.0
+head_effect_at_width_32,entered_regime_030,H16_D32,H8_D32,10,0.1,0.1,0.0,1,1,0,8,1.0
+head_effect_at_width_32,entered_regime_050,H16_D32,H8_D32,10,0.1,0.1,0.0,1,1,0,8,1.0
+head_effect_at_width_32,final_success_threshold_080,H16_D32,H8_D32,10,0.1,0.0,0.1,1,0,0,9,1.0
+head_effect_at_width_64,entered_regime_030,H16_D64,H8_D64,10,0.2,0.3,-0.09999999999999998,1,2,1,6,1.0
+head_effect_at_width_64,entered_regime_050,H16_D64,H8_D64,10,0.1,0.3,-0.19999999999999998,0,2,1,7,0.5
+head_effect_at_width_64,final_success_threshold_080,H16_D64,H8_D64,10,0.0,0.2,-0.2,0,2,0,8,0.5

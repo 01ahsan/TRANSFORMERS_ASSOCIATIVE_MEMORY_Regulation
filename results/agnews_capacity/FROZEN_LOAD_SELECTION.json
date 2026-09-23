@@ -1,0 +1,22 @@
+{
+  "selected_F_for_agnews_confirmation": 6,
+  "selection_rule": "Choose the tested load whose pooled normalized-regime success probability across H8_D32 and H8_D64 is closest to 0.50; break ties toward the smaller F.",
+  "selection_uses_architecture_difference": false,
+  "normalized_binding_threshold": 0.4166666666666667,
+  "pooled_success_probability_at_selected_F": 0.30000000000000004,
+  "p_success_H8_D32_at_selected_F": 0.2,
+  "p_success_H8_D64_at_selected_F": 0.4,
+  "mapping_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+  ],
+  "future_confirmation_requirement": "agnews confirmation must use new seeds not present in Scripts 17--19."
+}

@@ -1,0 +1,2 @@
+primary_endpoint,n_paired_seeds,p_success_H8_D64,p_success_H8_D32,paired_risk_difference,bootstrap_ci_low,bootstrap_ci_high,wide_only_success,narrow_only_success,both_success,neither_success,discordant_pairs,exact_mcnemar_p_value,alpha,confirmatory_primary_supported
+maximum logged validation accuracy >= 0.50,40,0.35,0.025,0.325,0.175,0.5,14,1,0,25,15,0.0009765625,0.05,True

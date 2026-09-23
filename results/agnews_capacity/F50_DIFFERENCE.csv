@@ -1,0 +1,2 @@
+observed_F50_difference_H8_D64_minus_H8_D32,paired_bootstrap_ci_low,paired_bootstrap_ci_high,probability_difference_positive,bootstrap_replicates,n_paired_seeds
+0.07023271376694318,-0.07023149629875558,0.5390246149217388,0.851,5000,10

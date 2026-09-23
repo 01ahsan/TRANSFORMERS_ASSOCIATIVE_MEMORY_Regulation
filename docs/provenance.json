@@ -1,0 +1,85 @@
+{
+  "hash_algorithm": "SHA256",
+  "cell_numbering": "One-based, including markdown cells",
+  "sources": [
+    {
+      "study": "wikitext_capacity",
+      "file": "experiments/wikitext_capacity.py",
+      "sha256": "c140a6bb0fe53ea01d7920779cc960f0fb633bc8ebbc8c685c2d94630e1a5a9d",
+      "source_kind": "notebook_cell",
+      "source_cell": 4,
+      "source_sha256": "bb8e64ca6cea1658e591998a3eaa0e7d75bc59ead552763a0a95ec28dc43ec6d"
+    },
+    {
+      "study": "qk_intervention",
+      "file": "experiments/qk_intervention.py",
+      "sha256": "8a9b3053054fe313504884c7cd6aa39314f63a159b10e4acbede76325d0a5f67",
+      "source_kind": "notebook_cell",
+      "source_cell": 4,
+      "source_sha256": "cf8c22684cb2113e0cb1736425e07d6da724bfc94fc7c3122d4aa4ff9cd1ffbd"
+    },
+    {
+      "study": "head_factorial",
+      "file": "experiments/head_factorial.py",
+      "sha256": "7b7b1c8a4e969741b66b825cb1130c821848ce57efd8737b22d6fd2d53af522c",
+      "source_kind": "notebook_cell",
+      "source_cell": 3,
+      "source_sha256": "328bfb85d34fca2daa38a548b0841ee459a38582e9db7cbcdd7b4fadb993c2c5"
+    },
+    {
+      "study": "regime_dynamics",
+      "file": "analysis/regime_dynamics.py",
+      "sha256": "2a78fa3b2e0f72459dc05593b2c80b97000b16850f731fce803116b2b9ef981b",
+      "source_kind": "notebook_cell",
+      "source_cell": 3,
+      "source_sha256": "90593d64d02019690c458e5d1e2cfefc6736d9228bd626a99e755aad72c334ef"
+    },
+    {
+      "study": "wikitext_confirmation",
+      "file": "experiments/wikitext_confirmation.py",
+      "sha256": "6e6d44dfd541bb943f0a21d301f53ea7b4eb101312b507276cf4d0857f203b90",
+      "source_kind": "notebook_cell",
+      "source_cell": 3,
+      "source_sha256": "d9eb8f36eb978295b5a0fd04f302588f1651a430116042129cd74b7b5686e897"
+    },
+    {
+      "study": "agnews_transfer",
+      "file": "experiments/agnews_transfer.py",
+      "sha256": "fa28c843d80c311cdf78b4371185c847e30be8873e31a045034972d3a28fe2b3",
+      "source_kind": "notebook_cell",
+      "source_cell": 2,
+      "source_sha256": "9c3910f1aa92bce57e67de5430f635b068ee1030ca9c7168eddecbceff706064"
+    },
+    {
+      "study": "agnews_capacity",
+      "file": "experiments/agnews_capacity.py",
+      "sha256": "423ab144968569cbe959f057a91ef0f2fb77fb58922a4ee34def8c36a9d14065",
+      "source_kind": "notebook_cell",
+      "source_cell": 2,
+      "source_sha256": "1cfdd40170b0a5987e336c2e1659f2a168baa3e1b3c6ff8d6888cfe979872966"
+    },
+    {
+      "study": "agnews_confirmation",
+      "file": "experiments/agnews_confirmation.py",
+      "sha256": "097fcd49abb1e4b8a229de097ea896de9bf9b76e888558110257494680ce5119",
+      "source_kind": "notebook_cell",
+      "source_cell": 2,
+      "source_sha256": "2ff05560b5a60aa0041c4058c1c09bb8055f65482f289ea8c9e26cd49ca1ce14"
+    },
+    {
+      "study": "head_partition",
+      "file": "experiments/head_partition.py",
+      "sha256": "97eb6b3f78c5064a61fa9810940ae08e15c6b7c1f64ca8861bb5fc8bb74ae6e4",
+      "source_kind": "notebook_cell",
+      "source_cell": 2,
+      "source_sha256": "33e70a2d36f63dbbf27f534a854c038bec9edf39b3afa636dd506323ba19aaf8"
+    },
+    {
+      "study": "paper_assets",
+      "file": "analysis/paper_assets.py",
+      "sha256": "81c5fd2865f690d3654317bfbd6c0e7967f3471d86c80bbe5052b34dfde20df2",
+      "source_kind": "python_file",
+      "source_sha256": "74dc288d92965d035f6ebd38dfd3ff90a4546e013fb81f41555efebe97655505"
+    }
+  ]
+}
