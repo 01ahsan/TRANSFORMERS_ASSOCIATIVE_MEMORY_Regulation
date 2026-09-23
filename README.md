@@ -21,7 +21,7 @@ Install whichever PyTorch build matches your CUDA setup. Analysis and plotting
 run fine on CPU. Training needs CUDA: `wikitext_capacity.py` expects two GPUs,
 and the other experiments use one or two.
 
-## Regenerating the figures
+## figures
 
     python analysis/paper_assets.py --project-root results
 
@@ -32,7 +32,7 @@ The script warns and skips that curve. Everything else is still produced,
 including the capacity-boundary plot. Pass `--strict-main` if you'd rather
 it fail on missing main-paper inputs.
 
-## Training from Beginning
+## Training
 
 The first run downloads the datasets and the encoder. Caches, checkpoints and
 results are written under `outputs/`. Set `HEAD_GEOMETRY_ROOT` to put them
