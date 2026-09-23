@@ -66,19 +66,3 @@ environment are described in [docs/reproducibility.md](docs/reproducibility.md).
 WikiText-103 and AG News, embedded with a frozen `all-MiniLM-L6-v2`.
 Loading, preprocessing and dataset citations are in [docs/data.md](docs/data.md);
 BibTeX is in [references.bib](references.bib).
-
-## What's not here
-
-No datasets, weights or checkpoints are checked in. They are downloaded or
-generated locally.
-
-Some of the older synthetic-task scripts and the integrity-audit script we ran
-at the end are not part of this release. The code and result records behind
-all the main confirmatory claims are included. [docs/provenance.md](docs/provenance.md)
-lists what is missing and the checks we ran.
-
-We did not rerun the full GPU training for this release.
-
-## Citation
-
-Withheld for anonymous review.
